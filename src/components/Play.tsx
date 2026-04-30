@@ -157,7 +157,7 @@ export default function Play({ category, onBack }: Props) {
 
             <SwipeCard onNext={next} onPrev={prev}>
                 <Card
-                    category={config.label}
+                    category={category}
                     question={questions[index]}
                     color={config.color}
                 />
