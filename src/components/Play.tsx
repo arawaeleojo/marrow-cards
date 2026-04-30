@@ -6,6 +6,7 @@ import { categoryConfig } from "@/data/config";
 import { useProgress } from "@/hooks/useProgress";
 import Card from "./Card";
 import SwipeCard from "./SwipeCard";
+import { X } from "lucide-react";
 
 type Props = {
     category: CategoryKey;
@@ -22,9 +23,7 @@ export default function Play({ category, onBack }: Props) {
 
     useEffect(() => {
         const seen = localStorage.getItem("marrow-swipe-hint");
-        if (!seen) {
-            setShowHint(true);
-        }
+        if (!seen) setShowHint(true);
     }, []);
 
     const handleFirstInteraction = () => {
@@ -123,6 +122,14 @@ export default function Play({ category, onBack }: Props) {
     // =====================
     return (
         <div className="h-full w-full pt-6 pb-8 relative">
+
+            {/* CLOSE BUTTON */}
+            <button
+                onClick={onBack}
+                className="absolute top-3 left-4 z-10 text-white/60 active:scale-90 transition"
+            >
+                <X size={18} />
+            </button>
 
             {/* PROGRESS BAR */}
             <div className="absolute top-0 left-0 w-full h-[2px] bg-white/20">
