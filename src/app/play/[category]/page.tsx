@@ -82,7 +82,7 @@ export default function PlayPage() {
 
                 {isEnd ? (
                     <EndScreen
-                        category={config.label}
+                        category={category}
                         onRestart={() => setIndex(0)}
                         onHome={() => router.push("/")}
                     />
@@ -92,7 +92,7 @@ export default function PlayPage() {
                         {index < questions.length - 1 && (
                             <div className="absolute scale-[0.94] opacity-50 translate-y-2 transition-all duration-300">
                                 <Card
-                                    category={config.label}
+                                    category={category}
                                     question={questions[index + 1]}
                                     color={config.color}
                                 />
@@ -102,7 +102,7 @@ export default function PlayPage() {
                         {/* FRONT CARD */}
                         <SwipeCard onNext={next} onPrev={prev}>
                             <Card
-                                category={config.label}
+                                category={category}
                                 question={questions[index] ?? ""}
                                 color={config.color}
                             />
