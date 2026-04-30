@@ -107,7 +107,8 @@ export default function Home() {
 
       {showModal && selected && (
         <ContinueModal
-          category={categoryConfig[selected].label}
+          category={selected} // ✅ correct key
+          label={categoryConfig[selected].label} // ✅ display only
           onContinue={handleContinue}
           onRestart={handleRestart}
           onClose={() => setShowModal(false)}
