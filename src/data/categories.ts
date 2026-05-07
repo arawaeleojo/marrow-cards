@@ -121,7 +121,7 @@ export const categories: Record<CategoryKey, string[]> = {
         "What past hurt still influences how you relate to me?",
         "How do you react when you feel emotionally neglected?",
         "What pattern do you notice in your relationships?",
-        "What will you never tolerate again?",
+        "Do you think love can survive cheating?",
         "What actually ended your last relationship?",
         "What does emotional safety mean to you in practice?",
         "What need from your childhood still shows up today?",
